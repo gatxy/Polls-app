@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-4.5.0-dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+</head>
+<body>
+<hr>
+<p> Header </p>
+<hr>
+{% include 'polls/header.html' %}
+<div class="jumbotron">
+    <div class="container">
+        {% block main_content %}
+        {% endblock %}
+    </div>
+</div>
+{% include 'polls/footer.html' %}
+</body>
+</html>
